@@ -58,7 +58,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # This uses either a .env key or Heroku config var called SECRET
-SECRET_KEY = os.getenv('SECRET')
+
+# SECRET_KEY = os.getenv('SECRET')
+SECRET_KEY="q%ev+399*d!a=fc!tnf^a2(2=vb9fzp@kc%iwf9)d@%=lw#w(h"
+
 
 # Application definition
 
