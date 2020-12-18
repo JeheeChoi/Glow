@@ -1,12 +1,18 @@
-# Glow On You SPA(Single Page Application)
 - - - -
+# Glow On You SPA(Single Page Application)
+
 
 Glow On You(Glow) is inspired by "Glow And Grow" from GA. 
 GA SEI cohorts share feedback - glow(something ) & grow(something to improve) with each other on our projects.
 Glow app allows users to share Glow (more positive messages!) by creating a board with a title/topic(i.e. "J - Graduation Project") that many other users can leave glow messages on. 
 
+- - - -
+
+
+
 
 ## Planning, process and problem-solving strategy
+
 
 - Day 1: Planning - User stories, Wireframes, ERD, front end/back end repo setup, catalog of routes, and building backend model schema and serializers
 - Day 2: Working details of back end functionality - relationships between resources
@@ -14,7 +20,10 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 - Day 4: Deploy front end and back end
 
 
+
+
 ## User Stories
+
 
 - As an unregistered user, I would like to sign up with email and password.
 - As a registered user, I would like to sign in with email and password.
@@ -25,7 +34,11 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 - As a signed in user, I would like to create/update/view/delete a glow message on the board
 - As a signed in user, I would like to view a single or multiple glow messages of the board
 
+
+
+
 ## ERD 
+
 
 - User - Board : one to many relationship/ many to many relationship
 - User - Glow: One to many relationship
@@ -34,7 +47,10 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 ![ERD](https://i.imgur.com/i1tsy7V.png)
 
 
+
+
 ## Glow On You API
+
 
 | HTTP Method   | URL Path      | Result              | 
 |:--------------|:--------------|:--------------------| 
@@ -52,7 +68,10 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 | DELETE        | /glows/`:id`  | delete glow         |
 
 
+
+
 ## WireFrames
+
 
 ![wireframe1](https://i.imgur.com/KxaLnXr.png)
 ![wireframe2](https://i.imgur.com/dweAeh1.png)
@@ -60,7 +79,10 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 ![wireframe4](https://i.imgur.com/G5yzgL7.png)
 
 
+
+
 ## Important Links
+
 
 - [Project Front End Repo](https://github.com/JeheeChoi/Glow-client)
 - [Project Back End Repo]
@@ -68,7 +90,10 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 - [Deployed Client]
 
 
+
+
 ## Technologies Used
+
 
 - Python
 - Django(SQL)
@@ -76,5 +101,6 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 - REST framework
 - Git/GitHub
 - Postman
+
 
 
