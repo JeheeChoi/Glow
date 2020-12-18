@@ -1,4 +1,4 @@
-# Capstone Project - Glow On You
+# Glow On You SPA(Single Page Application)
 - - - -
 
 Glow On You(Glow) is inspired by "Glow And Grow" from GA. 
@@ -27,9 +27,9 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 
 ## ERD 
 
-User - Board : one to many relationship/ many to many relationship
-User - Glow: One to many relationship
-Board - Glow: one to many relationship
+- User - Board : one to many relationship/ many to many relationship
+- User - Glow: One to many relationship
+- Board - Glow: one to many relationship
 
 ![ERD](https://i.imgur.com/i1tsy7V.png)
 
