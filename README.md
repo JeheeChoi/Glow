@@ -35,15 +35,21 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 
 
 ## Glow On You API
-- - - -
 
-| HTTP Method   | URL Path      | Result              | | HTTP Method   | URL Path      | Result              |
-|:--------------|:--------------|:--------------------| |:--------------|:--------------|:--------------------|
-| GET           | /home         | index of boards     | | POST          | /glows        | create glow         |
-| POST          | /boards       | create boards       | | GET           | /glows/`:id`  | show single glow    |
-| GET           | /boards/`:id` | show single board   | | PATCH         | /glows/`:id`  | update glow         |
-| PATCH         | /boards/`:id` | update board        | | DELETE        | /glows/`:id`  | delete glow         |
+| HTTP Method   | URL Path      | Result              | 
+|:--------------|:--------------|:--------------------| 
+| GET           | /home         | index of boards     | 
+| POST          | /boards       | create boards       | 
+| GET           | /boards/`:id` | show single board   | 
+| PATCH         | /boards/`:id` | update board        | 
 | DELETE        | /boards/`:id` | delete board        |
+
+| HTTP Method   | URL Path      | Result              |
+|:--------------|:--------------|:--------------------|
+| POST          | /glows        | create glow         |
+| GET           | /glows/`:id`  | show single glow    |
+| PATCH         | /glows/`:id`  | update glow         |
+| DELETE        | /glows/`:id`  | delete glow         |
 
 
 ## WireFrames
