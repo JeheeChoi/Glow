@@ -34,6 +34,18 @@ Board - Glow: one to many relationship
 ![ERD](https://i.imgur.com/i1tsy7V.png)
 
 
+## Glow On You API
+- - - -
+
+| HTTP Method   | URL Path      | Result              | | HTTP Method   | URL Path      | Result              |
+|:--------------|:--------------|:--------------------| |:--------------|:--------------|:--------------------|
+| GET           | /home         | index of boards     | | POST          | /glows        | create glow         |
+| POST          | /boards       | create boards       | | GET           | /glows/`:id`  | show single glow    |
+| GET           | /boards/`:id` | show single board   | | PATCH         | /glows/`:id`  | update glow         |
+| PATCH         | /boards/`:id` | update board        | | DELETE        | /glows/`:id`  | delete glow         |
+| DELETE        | /boards/`:id` | delete board        |
+
+
 ## WireFrames
 
 ![wireframe1](https://i.imgur.com/KxaLnXr.png)
@@ -59,22 +71,4 @@ Board - Glow: one to many relationship
 - Git/GitHub
 - Postman
 
-
-## Glow On You API
-- - - -
-
-| HTTP Method   | URL Path      | Result              | 
-|:--------------|:--------------|:--------------------|
-| GET           | /home         | index of boards     |
-| POST          | /boards       | create boards       |
-| GET           | /boards/`:id` | show single board   |
-| PATCH         | /boards/`:id` | update board        |
-| DELETE        | /boards/`:id` | delete board        |
-
-| HTTP Method   | URL Path      | Result              |
-|:--------------|:--------------|:--------------------|
-| POST          | /glows        | create glow         |
-| GET           | /glows/`:id`  | show single glow    |
-| PATCH         | /glows/`:id`  | update glow         |
-| DELETE        | /glows/`:id`  | delete glow         |
 
