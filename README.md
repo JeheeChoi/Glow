@@ -49,6 +49,15 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 
 
 
+## WireFrames
+
+
+![wireframe1](https://i.imgur.com/KxaLnXr.png)
+![wireframe2](https://i.imgur.com/dweAeh1.png)
+![wireframe3](https://i.imgur.com/SbWGbAF.png)
+![wireframe4](https://i.imgur.com/G5yzgL7.png)
+
+
 ## Glow On You API
 
 
@@ -66,18 +75,6 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 | GET           | /glows/`:id`  | show single glow    |
 | PATCH         | /glows/`:id`  | update glow         |
 | DELETE        | /glows/`:id`  | delete glow         |
-
-
-
-
-## WireFrames
-
-
-![wireframe1](https://i.imgur.com/KxaLnXr.png)
-![wireframe2](https://i.imgur.com/dweAeh1.png)
-![wireframe3](https://i.imgur.com/SbWGbAF.png)
-![wireframe4](https://i.imgur.com/G5yzgL7.png)
-
 
 
 
