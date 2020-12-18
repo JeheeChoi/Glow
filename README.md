@@ -45,7 +45,7 @@ Board - Glow: one to many relationship
 
 ### Important Links
 
-- [Project Front End Repo]
+- [Project Front End Repo](https://github.com/JeheeChoi/Glow-client)
 - [Project Back End Repo]
 - [Deployed API]
 - [Deployed Client]
