@@ -1,6 +1,6 @@
 from django.urls import path
 from .views.mango_views import Mangos, MangoDetail
-from .views.board_views import Boards
+from .views.board_views import Boards, BoardDetail
 from .views.user_views import SignUp, SignIn, SignOut, ChangePassword
 
 urlpatterns = [
@@ -12,5 +12,6 @@ urlpatterns = [
     path('sign-out/', SignOut.as_view(), name='sign-out'),
     path('change-pw/', ChangePassword.as_view(), name='change-pw'),
     # Board
-    path('boards/', Boards.as_view(), name='boards')
+    path('boards/', Boards.as_view(), name='boards'),
+    path('boards/<int:pk>/', BoardDetail.as_view(), name='board_detail')
 ]
