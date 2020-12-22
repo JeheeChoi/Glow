@@ -55,3 +55,19 @@ class BoardDetail(generics.RetrieveUpdateDestroyAPIView):
           raise PermissionDenied('Unauthorized, you do not own this board')
       board.delete()
       return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def partial_update(self, request, pk):
+      """Update Request"""
+      if request.data['board'].get('owner', False):
+          del request.data['board']['owner']
+
+      board = get_object_or_404(Board, pk=pk)
+      if not request.user.id == board.owner.id:
+          raise PermissionDenied('Unauthorized, you do not own this board')
+
+      request.data['board']['owner'] = request.user.id
+      data = BoardSerializer(board, data=request.data['board'])
+      if data.is_valid():
+          data.save()
+          return Response(status=status.HTTP_204_NO_CONTENT)
+      return Response(data.errors, status=status.HTTP_400_BAD_REQUEST)
