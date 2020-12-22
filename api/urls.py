@@ -14,4 +14,5 @@ urlpatterns = [
     # Board
     path('boards/', Boards.as_view(), name='boards'),
     path('boards/<int:pk>/', BoardDetail.as_view(), name='board_detail')
+    # Glow
 ]
