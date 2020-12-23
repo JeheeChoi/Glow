@@ -35,3 +35,18 @@ class Glows(generics.ListCreateAPIView):
           glow.save()
           return Response({ 'glow': glow.data }, status=status.HTTP_201_CREATED)
       return Response(glow.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class GlowDetail(generics.RetrieveUpdateDestroyAPIView):
+    def get(self, request, pk):
+      """Show request"""
+      glow = get_object_or_404(Glow, pk=pk)
+      data = GlowSerializer(glow).data
+      return Response({ 'glow': data })
+
+    def delete(self, request, pk):
+      """Delete request"""
+      glow = get_object_or_404(glow, pk=pk)
+      if not request.user.id == glow.owner.id:
+        raise PermissionDenied('Unauthorized, you do not own this glow')
+      glow.delete()
+      return Response(status=status.HTTP_204_NO_CONTENT)

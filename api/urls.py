@@ -1,7 +1,7 @@
 from django.urls import path
 from .views.mango_views import Mangos, MangoDetail
 from .views.board_views import Boards, BoardDetail
-from .views.glow_views import Glows
+from .views.glow_views import Glows, GlowDetail
 from .views.user_views import SignUp, SignIn, SignOut, ChangePassword
 
 urlpatterns = [
@@ -20,5 +20,5 @@ urlpatterns = [
     path('boards/<int:board_id>/glows/', Glows.as_view(), name='glows'),
     # Glow - show/delete/update
     # path('boards/<int:pk>/glows/<int:pk>/', GlowDetail.as_view(), name='glows')
-
+    path('boards/<int:board_id>/glows/<int:pk>/', GlowDetail.as_view(), name='glow_detail'),
 ]
