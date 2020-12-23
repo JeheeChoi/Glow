@@ -14,7 +14,11 @@ urlpatterns = [
     path('change-pw/', ChangePassword.as_view(), name='change-pw'),
     # Board
     path('boards/', Boards.as_view(), name='boards'),
+    # Board with glowIndex
     path('boards/<int:pk>/', BoardDetail.as_view(), name='board_detail'),
-    # Glow
-    path('glows/', Glows.as_view(), name='glows')
+    # Glow - create
+    path('boards/<int:board_id>/glows/', Glows.as_view(), name='glows'),
+    # Glow - show/delete/update
+    # path('boards/<int:pk>/glows/<int:pk>/', GlowDetail.as_view(), name='glows')
+
 ]

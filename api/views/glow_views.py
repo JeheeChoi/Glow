@@ -15,19 +15,19 @@ from ..serializers import GlowSerializer, UserSerializer
 class Glows(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
     serializer_class = GlowSerializer
-    def get(self, request):
+    def get(self, request, board_id):
         """Index request"""
         # Get all the glows on the board
-        glows = Glow.objects.filter(board_id=request.board_id)
+        glows = Glow.objects.filter(board_id=board_id)
 
         data = GlowSerializer(glows, many=True).data
         return Response({ 'glows': data })
 
-    def post(self, request):
+    def post(self, request, board_id):
       """Create request"""
       # Add user to request data object 'author'
       request.data['glow']['owner'] = request.user.id
-      request.data['glow']['board_id'] = request.board_id
+      request.data['glow']['board_id'] = board_id
       # Serialize/ Create board
       glow = GlowSerializer(data=request.data['glow'])
 
