@@ -10,7 +10,7 @@ from django.middleware.csrf import get_token
 from ..models.glow import Glow
 from ..serializers import GlowSerializer, UserSerializer
 
-# Index Glows
+# Index Glows - show all the glows that belong to the board/:id
 # Create Glows
 class Glows(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
@@ -18,7 +18,7 @@ class Glows(generics.ListCreateAPIView):
     def get(self, request):
         """Index request"""
         # Get all the glows on the board
-        glows = Glow.objects.all()
+        glows = Glow.objects.filter(board_id=request.board_id)
 
         data = GlowSerializer(glows, many=True).data
         return Response({ 'glows': data })
@@ -27,6 +27,7 @@ class Glows(generics.ListCreateAPIView):
       """Create request"""
       # Add user to request data object 'author'
       request.data['glow']['owner'] = request.user.id
+      request.data['glow']['board_id'] = request.board_id
       # Serialize/ Create board
       glow = GlowSerializer(data=request.data['glow'])
 
