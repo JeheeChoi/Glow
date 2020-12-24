@@ -4,6 +4,7 @@ from rest_framework import serializers
 from .models.mango import Mango
 from .models.user import User
 from .models.board import Board
+from .models.glow import Glow
 
 class MangoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -13,6 +14,11 @@ class MangoSerializer(serializers.ModelSerializer):
 class BoardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Board
+        fields = '__all__'
+
+class GlowSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Glow
         fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
