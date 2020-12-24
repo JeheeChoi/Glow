@@ -19,6 +19,7 @@ urlpatterns = [
     # Glow - create
     path('boards/<int:board_id>/glows/', Glows.as_view(), name='glows'),
     # Glow - show/delete/update
+    # path('boards/<int:board_id>glows/<int:pk>/', GlowDetail.as_view(), name='show-glow_detail'),
     # path('boards/<int:pk>/glows/<int:pk>/', GlowDetail.as_view(), name='glows')
-    path('boards/<int:board_id>/glows/<int:pk>/', GlowDetail.as_view(), name='glow_detail'),
+    path('glows/<int:pk>/', GlowDetail.as_view(), name='glow_detail'),
 ]

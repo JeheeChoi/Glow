@@ -37,16 +37,32 @@ class Glows(generics.ListCreateAPIView):
       return Response(glow.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class GlowDetail(generics.RetrieveUpdateDestroyAPIView):
-    def get(self, request, board_id, pk):
+    def get(self, request, pk):
       """Show request"""
-      glow = get_object_or_404(Glow, board_id=board_id, pk=pk)
+      glow = get_object_or_404(Glow, pk=pk)
       data = GlowSerializer(glow).data
       return Response({ 'glow': data })
 
-    def delete(self, request, board_id, pk):
+    def delete(self, request, pk):
       """Delete request"""
-      glow = get_object_or_404(Glow, board_id=board_id, pk=pk)
+      glow = get_object_or_404(Glow, pk=pk)
       if not request.user.id == glow.owner.id:
         raise PermissionDenied('Unauthorized, you do not own this glow')
       glow.delete()
       return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def partial_update(self, request, pk):
+      """Update Request"""
+      if request.data['glow'].get('owner', False):
+          del request.data['glow']['owner']
+
+      glow = get_object_or_404(Glow, pk=pk)
+      if not request.user.id == glow.owner.id:
+          raise PermissionDenied('Unauthorized, you do not own this glow')
+
+      request.data['glow']['owner'] = request.user.id
+      data = GlowSerializer(glow, data=request.data['glow'])
+      if data.is_valid():
+          data.save()
+          return Response(status=status.HTTP_204_NO_CONTENT)
+      return Response(data.errors, status=status.HTTP_400_BAD_REQUEST)
