@@ -82,9 +82,9 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 
 
 - [Project Front End Repo](https://github.com/JeheeChoi/Glow-client)
-- [Project Back End Repo]
-- [Deployed API]
-- [Deployed Client]
+- [Project Back End Repo](https://github.com/JeheeChoi/Glow)
+- [Deployed API](https://glow-on-you.herokuapp.com/)
+- [Deployed Client](https://jeheechoi.github.io/Glow-client/#/home)
 
 
 
