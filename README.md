@@ -68,13 +68,13 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 | PATCH         | /boards/`:id` | update board        | 
 | DELETE        | /boards/`:id` | delete board        |
 
-| HTTP Method   | URL Path            | Result              |
-|:--------------|:--------------------|:--------------------|
-| POST          | /boards/:id/glows   | create glow         |
-| GET           | /boards/:id/glows   | index glow of the board   |
-| GET           | /glows/`:id`        | show single glow    |
-| PATCH         | /glows/`:id`        | update glow         |
-| DELETE        | /glows/`:id`        | delete glow         |
+| HTTP Method   | URL Path                   | Result                   |
+|:--------------|:---------------------------|:-------------------------|
+| POST          | /boards/`:board_id`/glows  | create glow              |
+| GET           | /boards/`:board_id`/glows  | index glow of the board  |
+| GET           | /glows/`:id`               | show single glow         |
+| PATCH         | /glows/`:id`               | update glow              |
+| DELETE        | /glows/`:id`               | delete glow              |
 
 
 
