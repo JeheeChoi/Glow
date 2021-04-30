@@ -93,7 +93,7 @@ Glow app allows users to share Glow (more positive messages!) by creating a boar
 
 
 - Python
-- Django(SQL)
+- Django
 - PostgreSQL
 - REST framework
 - Git/GitHub
