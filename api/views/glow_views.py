@@ -25,7 +25,7 @@ class Glows(generics.ListCreateAPIView):
 
     def post(self, request, board_id):
       """Create request"""
-      # Add user to request data object 'author'
+      # Add owner to request data object 'glow'
       request.data['glow']['owner'] = request.user.id
       request.data['glow']['board_id'] = board_id
       # Serialize/ Create board
